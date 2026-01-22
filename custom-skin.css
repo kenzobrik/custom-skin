@@ -1,50 +1,55 @@
-/* === GLOBAL CONTROLLER COLOR TINT === */
-.controller {
-  filter: drop-shadow(0 0 18px rgba(205, 88, 244, 0.6));
+/* ===== FORCE OVERRIDE (SVG) ===== */
+svg * {
+  transition: all 0.12s ease;
 }
 
-/* === FACE BUTTONS (△ ○ ✕ □) === */
-.button {
+/* ===== FACE BUTTONS ===== */
+svg .face.button polygon,
+svg .face.button path,
+svg .button polygon,
+svg .button path {
   fill: #6B93FC !important;
   stroke: #CD58F4 !important;
-  filter: drop-shadow(0 0 6px rgba(205, 88, 244, 0.9));
-  transition: all 0.15s ease;
+  filter: drop-shadow(0 0 6px #CD58F4);
 }
 
-/* Button active (pressed) */
-.button.pressed {
+svg .face.button.pressed polygon,
+svg .face.button.pressed path {
   fill: #CD58F4 !important;
-  filter: drop-shadow(0 0 12px rgba(205, 88, 244, 1));
+  filter: drop-shadow(0 0 12px #CD58F4);
 }
 
-/* === D-PAD === */
-.dpad polygon {
+/* ===== D-PAD ===== */
+svg .dpad polygon {
   fill: #7130B2 !important;
 }
 
-/* === TRIGGERS L2 / R2 === */
-.trigger {
+/* ===== TRIGGERS ===== */
+svg .trigger path,
+svg .trigger polygon {
   fill: #6B93FC !important;
 }
 
-.trigger.pressed {
+svg .trigger.pressed path,
+svg .trigger.pressed polygon {
   fill: #CD58F4 !important;
-  filter: drop-shadow(0 0 14px rgba(205, 88, 244, 1));
+  filter: drop-shadow(0 0 12px #CD58F4);
 }
 
-/* === ANALOG STICKS === */
-.stick {
+/* ===== STICKS ===== */
+svg .stick circle {
   fill: #1a1a25 !important;
   stroke: #6B93FC !important;
+  stroke-width: 2;
 }
 
-.stick.pressed {
+svg .stick.pressed circle {
   stroke: #CD58F4 !important;
-  filter: drop-shadow(0 0 10px rgba(205, 88, 244, 1));
+  filter: drop-shadow(0 0 10px #CD58F4);
 }
 
-/* === TOUCHPAD GLOW === */
-.touchpad {
-  fill: rgba(107, 147, 252, 0.25) !important;
-  filter: drop-shadow(0 0 20px rgba(107, 147, 252, 0.6));
+/* ===== TOUCHPAD ===== */
+svg .touchpad rect {
+  fill: rgba(107, 147, 252, 0.35) !important;
+  filter: drop-shadow(0 0 18px #6B93FC);
 }
