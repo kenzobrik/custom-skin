@@ -1,0 +1,23 @@
+:root {
+  --neon-purple: #CD58F4;
+  --deep-purple: #7130B2;
+  --neon-blue: #6B93FC;
+  --ice-blue: #B1CFFC;
+  --soft-white: #FCFBFE;
+}
+
+.control-overlay {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    circle at top,
+    rgba(205, 88, 244, 0.25),
+    rgba(107, 147, 252, 0.15),
+    rgba(17, 17, 25, 0.85)
+  );
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(177, 207, 252, 0.35);
+  box-shadow:
+    0 0 20px rgba(205, 88, 244, 0.35),
+    inset 0 0 30px rgba(107, 147, 252, 0.25);
+}
