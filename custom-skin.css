@@ -1,23 +1,50 @@
-:root {
-  --neon-purple: #CD58F4;
-  --deep-purple: #7130B2;
-  --neon-blue: #6B93FC;
-  --ice-blue: #B1CFFC;
-  --soft-white: #FCFBFE;
+/* === GLOBAL CONTROLLER COLOR TINT === */
+.controller {
+  filter: drop-shadow(0 0 18px rgba(205, 88, 244, 0.6));
 }
 
-.control-overlay {
-  position: absolute;
-  inset: 0;
-  background: radial-gradient(
-    circle at top,
-    rgba(205, 88, 244, 0.25),
-    rgba(107, 147, 252, 0.15),
-    rgba(17, 17, 25, 0.85)
-  );
-  backdrop-filter: blur(10px);
-  border: 1px solid rgba(177, 207, 252, 0.35);
-  box-shadow:
-    0 0 20px rgba(205, 88, 244, 0.35),
-    inset 0 0 30px rgba(107, 147, 252, 0.25);
+/* === FACE BUTTONS (△ ○ ✕ □) === */
+.button {
+  fill: #6B93FC !important;
+  stroke: #CD58F4 !important;
+  filter: drop-shadow(0 0 6px rgba(205, 88, 244, 0.9));
+  transition: all 0.15s ease;
+}
+
+/* Button active (pressed) */
+.button.pressed {
+  fill: #CD58F4 !important;
+  filter: drop-shadow(0 0 12px rgba(205, 88, 244, 1));
+}
+
+/* === D-PAD === */
+.dpad polygon {
+  fill: #7130B2 !important;
+}
+
+/* === TRIGGERS L2 / R2 === */
+.trigger {
+  fill: #6B93FC !important;
+}
+
+.trigger.pressed {
+  fill: #CD58F4 !important;
+  filter: drop-shadow(0 0 14px rgba(205, 88, 244, 1));
+}
+
+/* === ANALOG STICKS === */
+.stick {
+  fill: #1a1a25 !important;
+  stroke: #6B93FC !important;
+}
+
+.stick.pressed {
+  stroke: #CD58F4 !important;
+  filter: drop-shadow(0 0 10px rgba(205, 88, 244, 1));
+}
+
+/* === TOUCHPAD GLOW === */
+.touchpad {
+  fill: rgba(107, 147, 252, 0.25) !important;
+  filter: drop-shadow(0 0 20px rgba(107, 147, 252, 0.6));
 }
